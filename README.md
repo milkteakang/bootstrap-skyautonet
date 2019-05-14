@@ -15,3 +15,5 @@
 [bootstrap.min.css](docs/4.3/dist/css/bootstrap.min.css)
 
 [bootstrap.min.js](docs/4.3/dist/js/bootstrap.min.js)
+
+[zip file](bootstrap-4.3.1-dist.zip)
