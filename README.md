@@ -10,4 +10,4 @@
 * components padding y lg : .375rem
 * components padding x lg : .75rem
 
-[example link](https://milkteakang.github.io/bootstrap-skyautonet/)
+[example link](https://milkteakang.github.io/bootstrap-skyautonet/docs/4.3/components/index.html)
