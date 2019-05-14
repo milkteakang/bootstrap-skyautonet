@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Convey meaning through color with a handful of color utility classes. Includes support for styling links with hover states, too.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Hugo 0.55.4">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="4.3">
+
+<title>Colors · Bootstrap</title>
+
+<link rel="canonical" href="/docs/4.3/utilities/colors/">
+
+
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="/docs/4.3/dist/css/bootstrap.css">
+
+<!-- Documentation extras -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+<link rel="stylesheet" href="/docs/4.3/assets/css/docs.min.css">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.3/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.3/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.3/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.3/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140139494-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-140139494-1');
+</script>
+
+
+  </head>
+  <body>
+    <a class="skippy sr-only sr-only-focusable" href="#content">
+  <span class="skippy-text">Skip to main content</span>
+</a>
+
+
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+  <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="d-block" viewBox="0 0 612 612" role="img"><title>Bootstrap</title><path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/><path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/></svg>
+  </a>
+
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item">
+        <a class="nav-link" href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/4.3/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
+      </li>
+    </ul>
+  </div>
+
+  <ul class="navbar-nav ml-md-auto">
+    <li class="nav-item dropdown">
+      <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-expanded="false">
+        v4.3
+      </a>
+      <div class="dropdown-menu dropdown-menu-md-right" aria-labelledby="bd-versions">
+        <a class="dropdown-item" href="/docs/4.3/">v4.3</a>
+      </div>
+    </li>
+  </ul>
+
+  <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="/docs/4.3/getting-started/download/">Download</a>
+</header>
+
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-md-3 col-xl-2 bd-sidebar">
+          <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/getting-started/introduction/">Getting started</a>
+      </div>
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/layout/overview/">Layout</a>
+      </div>
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/content/reboot/">Content</a>
+      </div>
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/components/alerts/">Components</a>
+      </div>
+
+    <div class="bd-toc-item active">
+        <a class="bd-toc-link" href="/docs/4.3/utilities/borders/">Utilities</a>
+        <ul class="nav bd-sidenav">
+            <li>
+              <a href="/docs/4.3/utilities/borders/">Borders</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/clearfix/">Clearfix</a>
+            </li>
+            <li class="active bd-sidenav-active">
+              <a href="/docs/4.3/utilities/colors/">Colors</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/display/">Display</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/embed/">Embed</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/flex/">Flex</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/float/">Float</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/overflow/">Overflow</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/position/">Position</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/screen-readers/">Screen readers</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/shadows/">Shadows</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/sizing/">Sizing</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/spacing/">Spacing</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/stretched-link/">Stretched link</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/text/">Text</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/vertical-align/">Vertical align</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/visibility/">Visibility</a>
+            </li>
+        </ul>
+      </div>
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/extend/approach/">Extend</a>
+      </div>
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/migration/">Migration</a>
+      </div>
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/about/overview/">About</a>
+      </div>
+</nav>
+
+        </div>
+
+        
+          <nav class="d-none d-xl-block col-xl-2 bd-toc" aria-label="Secondary navigation">
+            <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#color">Color</a></li>
+<li><a href="#background-color">Background color</a></li>
+<li><a href="#background-gradient">Background gradient</a></li>
+</ul></li>
+</ul>
+</nav>
+          </nav>
+        
+
+        <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+          <h1 class="bd-title" id="content">Colors</h1>
+          <p class="bd-lead">Convey meaning through color with a handful of color utility classes. Includes support for styling links with hover states, too.</p>
+          
+
+          
+
+<h2 id="color">Color</h2>
+
+<div class="bd-example">
+
+<p class="text-primary">.text-primary</p>
+<p class="text-secondary">.text-secondary</p>
+<p class="text-success">.text-success</p>
+<p class="text-danger">.text-danger</p>
+<p class="text-warning">.text-warning</p>
+<p class="text-info">.text-info</p>
+<p class="text-light bg-dark">.text-light</p>
+<p class="text-dark">.text-dark</p>
+<p class="text-indigo">.text-indigo</p>
+<p class="text-purple">.text-purple</p>
+<p class="text-pink">.text-pink</p>
+<p class="text-orange">.text-orange</p>
+<p class="text-teal">.text-teal</p>
+<p class="text-gray-100">.text-gray-100</p>
+<p class="text-gray-200">.text-gray-200</p>
+<p class="text-gray-300">.text-gray-300</p>
+<p class="text-gray-400">.text-gray-400</p>
+<p class="text-gray-500">.text-gray-500</p>
+<p class="text-gray-600">.text-gray-600</p>
+<p class="text-gray-700">.text-gray-700</p>
+<p class="text-gray-800">.text-gray-800</p>
+<p class="text-gray-900">.text-gray-900</p>
+<p class="text-body">.text-body</p>
+<p class="text-muted">.text-muted</p>
+<p class="text-white bg-dark">.text-white</p>
+<p class="text-black-50">.text-black-50</p>
+<p class="text-white-50 bg-dark">.text-white-50</p>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-primary&#34;</span><span class="p">&gt;</span>.text-primary<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-secondary&#34;</span><span class="p">&gt;</span>.text-secondary<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-success&#34;</span><span class="p">&gt;</span>.text-success<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-danger&#34;</span><span class="p">&gt;</span>.text-danger<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-warning&#34;</span><span class="p">&gt;</span>.text-warning<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-info&#34;</span><span class="p">&gt;</span>.text-info<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-light bg-dark&#34;</span><span class="p">&gt;</span>.text-light<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-dark&#34;</span><span class="p">&gt;</span>.text-dark<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-indigo&#34;</span><span class="p">&gt;</span>.text-indigo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-purple&#34;</span><span class="p">&gt;</span>.text-purple<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-pink&#34;</span><span class="p">&gt;</span>.text-pink<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-orange&#34;</span><span class="p">&gt;</span>.text-orange<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-teal&#34;</span><span class="p">&gt;</span>.text-teal<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-gray-100&#34;</span><span class="p">&gt;</span>.text-gray-100<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-gray-200&#34;</span><span class="p">&gt;</span>.text-gray-200<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-gray-300&#34;</span><span class="p">&gt;</span>.text-gray-300<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-gray-400&#34;</span><span class="p">&gt;</span>.text-gray-400<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-gray-500&#34;</span><span class="p">&gt;</span>.text-gray-500<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-gray-600&#34;</span><span class="p">&gt;</span>.text-gray-600<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-gray-700&#34;</span><span class="p">&gt;</span>.text-gray-700<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-gray-800&#34;</span><span class="p">&gt;</span>.text-gray-800<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-gray-900&#34;</span><span class="p">&gt;</span>.text-gray-900<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-body&#34;</span><span class="p">&gt;</span>.text-body<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-muted&#34;</span><span class="p">&gt;</span>.text-muted<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-white bg-dark&#34;</span><span class="p">&gt;</span>.text-white<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-black-50&#34;</span><span class="p">&gt;</span>.text-black-50<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-white-50 bg-dark&#34;</span><span class="p">&gt;</span>.text-white-50<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code></pre></div>
+
+<p>Contextual text classes also work well on anchors with the provided hover and focus states. <strong>Note that the <code>.text-white</code> and <code>.text-muted</code> class has no additional link styling beyond underline.</strong></p>
+
+<div class="bd-example">
+
+<p><a href="#" class="text-primary">Primary link</a></p>
+<p><a href="#" class="text-secondary">Secondary link</a></p>
+<p><a href="#" class="text-success">Success link</a></p>
+<p><a href="#" class="text-danger">Danger link</a></p>
+<p><a href="#" class="text-warning">Warning link</a></p>
+<p><a href="#" class="text-info">Info link</a></p>
+<p><a href="#" class="text-light bg-dark">Light link</a></p>
+<p><a href="#" class="text-dark">Dark link</a></p>
+<p><a href="#" class="text-indigo">Indigo link</a></p>
+<p><a href="#" class="text-purple">Purple link</a></p>
+<p><a href="#" class="text-pink">Pink link</a></p>
+<p><a href="#" class="text-orange">Orange link</a></p>
+<p><a href="#" class="text-teal">Teal link</a></p>
+<p><a href="#" class="text-gray-100">Gray-100 link</a></p>
+<p><a href="#" class="text-gray-200">Gray-200 link</a></p>
+<p><a href="#" class="text-gray-300">Gray-300 link</a></p>
+<p><a href="#" class="text-gray-400">Gray-400 link</a></p>
+<p><a href="#" class="text-gray-500">Gray-500 link</a></p>
+<p><a href="#" class="text-gray-600">Gray-600 link</a></p>
+<p><a href="#" class="text-gray-700">Gray-700 link</a></p>
+<p><a href="#" class="text-gray-800">Gray-800 link</a></p>
+<p><a href="#" class="text-gray-900">Gray-900 link</a></p>
+<p><a href="#" class="text-muted">Muted link</a></p>
+<p><a href="#" class="text-white bg-dark">White link</a></p>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-primary&#34;</span><span class="p">&gt;</span>Primary link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-secondary&#34;</span><span class="p">&gt;</span>Secondary link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-success&#34;</span><span class="p">&gt;</span>Success link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-danger&#34;</span><span class="p">&gt;</span>Danger link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-warning&#34;</span><span class="p">&gt;</span>Warning link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-info&#34;</span><span class="p">&gt;</span>Info link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-light bg-dark&#34;</span><span class="p">&gt;</span>Light link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-dark&#34;</span><span class="p">&gt;</span>Dark link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-indigo&#34;</span><span class="p">&gt;</span>Indigo link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-purple&#34;</span><span class="p">&gt;</span>Purple link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-pink&#34;</span><span class="p">&gt;</span>Pink link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-orange&#34;</span><span class="p">&gt;</span>Orange link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-teal&#34;</span><span class="p">&gt;</span>Teal link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-gray-100&#34;</span><span class="p">&gt;</span>Gray-100 link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-gray-200&#34;</span><span class="p">&gt;</span>Gray-200 link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-gray-300&#34;</span><span class="p">&gt;</span>Gray-300 link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-gray-400&#34;</span><span class="p">&gt;</span>Gray-400 link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-gray-500&#34;</span><span class="p">&gt;</span>Gray-500 link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-gray-600&#34;</span><span class="p">&gt;</span>Gray-600 link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-gray-700&#34;</span><span class="p">&gt;</span>Gray-700 link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-gray-800&#34;</span><span class="p">&gt;</span>Gray-800 link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-gray-900&#34;</span><span class="p">&gt;</span>Gray-900 link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-muted&#34;</span><span class="p">&gt;</span>Muted link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-white bg-dark&#34;</span><span class="p">&gt;</span>White link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code></pre></div>
+
+<h2 id="background-color">Background color</h2>
+
+<p>Similar to the contextual text color classes, easily set the background of an element to any contextual class. Background utilities <strong>do not set <code>color</code></strong>, so in some cases you&rsquo;ll want to use <code>.text-*</code> utilities.</p>
+
+<div class="bd-example">
+
+<div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
+<div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
+<div class="p-3 mb-2 bg-success text-white">.bg-success</div>
+<div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
+<div class="p-3 mb-2 bg-warning text-dark">.bg-warning</div>
+<div class="p-3 mb-2 bg-info text-white">.bg-info</div>
+<div class="p-3 mb-2 bg-light text-dark">.bg-light</div>
+<div class="p-3 mb-2 bg-dark text-white">.bg-dark</div>
+<div class="p-3 mb-2 bg-indigo text-white">.bg-indigo</div>
+<div class="p-3 mb-2 bg-purple text-white">.bg-purple</div>
+<div class="p-3 mb-2 bg-pink text-white">.bg-pink</div>
+<div class="p-3 mb-2 bg-orange text-white">.bg-orange</div>
+<div class="p-3 mb-2 bg-teal text-white">.bg-teal</div>
+<div class="p-3 mb-2 bg-gray-100 text-white">.bg-gray-100</div>
+<div class="p-3 mb-2 bg-gray-200 text-white">.bg-gray-200</div>
+<div class="p-3 mb-2 bg-gray-300 text-white">.bg-gray-300</div>
+<div class="p-3 mb-2 bg-gray-400 text-white">.bg-gray-400</div>
+<div class="p-3 mb-2 bg-gray-500 text-white">.bg-gray-500</div>
+<div class="p-3 mb-2 bg-gray-600 text-white">.bg-gray-600</div>
+<div class="p-3 mb-2 bg-gray-700 text-white">.bg-gray-700</div>
+<div class="p-3 mb-2 bg-gray-800 text-white">.bg-gray-800</div>
+<div class="p-3 mb-2 bg-gray-900 text-white">.bg-gray-900</div>
+<div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
+<div class="p-3 mb-2 bg-transparent text-dark">.bg-transparent</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-primary text-white&#34;</span><span class="p">&gt;</span>.bg-primary<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-secondary text-white&#34;</span><span class="p">&gt;</span>.bg-secondary<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-success text-white&#34;</span><span class="p">&gt;</span>.bg-success<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-danger text-white&#34;</span><span class="p">&gt;</span>.bg-danger<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-warning text-dark&#34;</span><span class="p">&gt;</span>.bg-warning<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-info text-white&#34;</span><span class="p">&gt;</span>.bg-info<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-light text-dark&#34;</span><span class="p">&gt;</span>.bg-light<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-dark text-white&#34;</span><span class="p">&gt;</span>.bg-dark<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-indigo text-white&#34;</span><span class="p">&gt;</span>.bg-indigo<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-purple text-white&#34;</span><span class="p">&gt;</span>.bg-purple<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-pink text-white&#34;</span><span class="p">&gt;</span>.bg-pink<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-orange text-white&#34;</span><span class="p">&gt;</span>.bg-orange<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-teal text-white&#34;</span><span class="p">&gt;</span>.bg-teal<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-gray-100 text-white&#34;</span><span class="p">&gt;</span>.bg-gray-100<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-gray-200 text-white&#34;</span><span class="p">&gt;</span>.bg-gray-200<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-gray-300 text-white&#34;</span><span class="p">&gt;</span>.bg-gray-300<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-gray-400 text-white&#34;</span><span class="p">&gt;</span>.bg-gray-400<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-gray-500 text-white&#34;</span><span class="p">&gt;</span>.bg-gray-500<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-gray-600 text-white&#34;</span><span class="p">&gt;</span>.bg-gray-600<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-gray-700 text-white&#34;</span><span class="p">&gt;</span>.bg-gray-700<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-gray-800 text-white&#34;</span><span class="p">&gt;</span>.bg-gray-800<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-gray-900 text-white&#34;</span><span class="p">&gt;</span>.bg-gray-900<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-white text-dark&#34;</span><span class="p">&gt;</span>.bg-white<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 mb-2 bg-transparent text-dark&#34;</span><span class="p">&gt;</span>.bg-transparent<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+
+<h2 id="background-gradient">Background gradient</h2>
+
+<p>When <code>$enable-gradients</code> is set to <code>true</code> (default is <code>false</code>), you can use <code>.bg-gradient-</code> utility classes. <a href="/docs/4.3/getting-started/theming/#sass-options">Learn about our Sass options</a> to enable these classes and more.</p>
+
+<ul>
+<li><code>.bg-gradient-primary</code></li>
+<li><code>.bg-gradient-secondary</code></li>
+<li><code>.bg-gradient-success</code></li>
+<li><code>.bg-gradient-danger</code></li>
+<li><code>.bg-gradient-warning</code></li>
+<li><code>.bg-gradient-info</code></li>
+<li><code>.bg-gradient-light</code></li>
+<li><code>.bg-gradient-dark</code></li>
+<li><code>.bg-gradient-indigo</code></li>
+<li><code>.bg-gradient-purple</code></li>
+<li><code>.bg-gradient-pink</code></li>
+<li><code>.bg-gradient-orange</code></li>
+<li><code>.bg-gradient-teal</code></li>
+<li><code>.bg-gradient-gray-100</code></li>
+<li><code>.bg-gradient-gray-200</code></li>
+<li><code>.bg-gradient-gray-300</code></li>
+<li><code>.bg-gradient-gray-400</code></li>
+<li><code>.bg-gradient-gray-500</code></li>
+<li><code>.bg-gradient-gray-600</code></li>
+<li><code>.bg-gradient-gray-700</code></li>
+<li><code>.bg-gradient-gray-800</code></li>
+<li><code>.bg-gradient-gray-900</code></li>
+</ul>
+
+<div class="bd-callout bd-callout-info">
+<h4 id="dealing-with-specificity">Dealing with specificity</h4>
+
+<p>Sometimes contextual classes cannot be applied due to the specificity of another selector. In some cases, a sufficient workaround is to wrap your element&rsquo;s content in a <code>&lt;div&gt;</code> with the class.
+</div>
+
+
+<div class="bd-callout bd-callout-info">
+<h5 id="conveying-meaning-to-assistive-technologies">Conveying meaning to assistive technologies</h5>
+
+<p>Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (e.g. the visible text), or is included through alternative means, such as additional text hidden with the <code>.sr-only</code> class.
+</div>
+
+
+        </main>
+      </div>
+    </div>
+
+    <script src="/docs/4.3/dist/js/bootstrap.bundle.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/docs/4.3/assets/js/vendor/anchor.min.js"></script>
+  <script src="/docs/4.3/assets/js/vendor/clipboard.min.js"></script>
+  <script src="/docs/4.3/assets/js/vendor/bs-custom-file-input.min.js"></script>
+  <script src="/docs/4.3/assets/js/src/application.js"></script>
+  <script src="/docs/4.3/assets/js/src/search.js"></script>
+  </body>
+</html>

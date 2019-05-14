@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Learn how to include Bootstrap in your project using Webpack or other bundlers.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Hugo 0.55.4">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="4.3">
+
+<title>Webpack and bundlers · Bootstrap</title>
+
+<link rel="canonical" href="/docs/4.3/getting-started/webpack/">
+
+
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="/docs/4.3/dist/css/bootstrap.css">
+
+<!-- Documentation extras -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+<link rel="stylesheet" href="/docs/4.3/assets/css/docs.min.css">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.3/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.3/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.3/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.3/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140139494-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-140139494-1');
+</script>
+
+
+  </head>
+  <body>
+    <a class="skippy sr-only sr-only-focusable" href="#content">
+  <span class="skippy-text">Skip to main content</span>
+</a>
+
+
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+  <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="d-block" viewBox="0 0 612 612" role="img"><title>Bootstrap</title><path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/><path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/></svg>
+  </a>
+
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item">
+        <a class="nav-link" href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/4.3/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
+      </li>
+    </ul>
+  </div>
+
+  <ul class="navbar-nav ml-md-auto">
+    <li class="nav-item dropdown">
+      <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-expanded="false">
+        v4.3
+      </a>
+      <div class="dropdown-menu dropdown-menu-md-right" aria-labelledby="bd-versions">
+        <a class="dropdown-item" href="/docs/4.3/">v4.3</a>
+      </div>
+    </li>
+  </ul>
+
+  <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="/docs/4.3/getting-started/download/">Download</a>
+</header>
+
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-md-3 col-xl-2 bd-sidebar">
+          <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+    <div class="bd-toc-item active">
+        <a class="bd-toc-link" href="/docs/4.3/getting-started/introduction/">Getting started</a>
+        <ul class="nav bd-sidenav">
+            <li>
+              <a href="/docs/4.3/getting-started/introduction/">Introduction</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/getting-started/download/">Download</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/getting-started/contents/">Contents</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/getting-started/browsers-devices/">Browsers &amp; devices</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/getting-started/javascript/">JavaScript</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/getting-started/theming/">Theming</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/getting-started/build-tools/">Build tools</a>
+            </li>
+            <li class="active bd-sidenav-active">
+              <a href="/docs/4.3/getting-started/webpack/">Webpack</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/getting-started/accessibility/">Accessibility</a>
+            </li>
+        </ul>
+      </div>
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/layout/overview/">Layout</a>
+      </div>
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/content/reboot/">Content</a>
+      </div>
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/components/alerts/">Components</a>
+      </div>
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/utilities/borders/">Utilities</a>
+      </div>
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/extend/approach/">Extend</a>
+      </div>
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/migration/">Migration</a>
+      </div>
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/about/overview/">About</a>
+      </div>
+</nav>
+
+        </div>
+
+        
+          <nav class="d-none d-xl-block col-xl-2 bd-toc" aria-label="Secondary navigation">
+            <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#installing-bootstrap">Installing Bootstrap</a></li>
+<li><a href="#importing-javascript">Importing JavaScript</a></li>
+<li><a href="#importing-styles">Importing Styles</a>
+<ul>
+<li><a href="#importing-precompiled-sass">Importing Precompiled Sass</a></li>
+<li><a href="#importing-compiled-css">Importing Compiled CSS</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+          </nav>
+        
+
+        <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+          <h1 class="bd-title" id="content">Webpack and bundlers</h1>
+          <p class="bd-lead">Learn how to include Bootstrap in your project using Webpack or other bundlers.</p>
+          
+
+          
+
+<h2 id="installing-bootstrap">Installing Bootstrap</h2>
+
+<p><a href="/docs/4.3/getting-started/download/#npm">Install bootstrap</a> as a Node.js module using npm.</p>
+
+<h2 id="importing-javascript">Importing JavaScript</h2>
+
+<p>Import <a href="/docs/4.3/getting-started/javascript/">Bootstrap&rsquo;s JavaScript</a> by adding this line to your app&rsquo;s entry point (usually <code>index.js</code> or <code>app.js</code>):</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// You can specify which plugins you need
+</span><span class="c1"></span><span class="k">import</span> <span class="p">{</span> <span class="nx">Tooltip</span><span class="p">,</span> <span class="nx">Toast</span><span class="p">,</span> <span class="nx">Popover</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;bootstrap&#39;</span><span class="p">;</span>
+</code></pre></div>
+
+<p>Alternatively, if you only need just a few of our plugins, you may <strong>import plugins individually</strong> as needed:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="k">import</span> <span class="nx">Alert</span> <span class="nx">from</span> <span class="s1">&#39;bootstrap/js/dist/alert&#39;</span><span class="p">;</span>
+<span class="p">...</span>
+</code></pre></div>
+
+<p>Bootstrap dependends on <a href="https://popper.js.org/">Popper</a>, which is speicified in the <code>peerDependencies</code> property.
+This means that you will have to make sure to add both of them to your <code>package.json</code> using <code>npm install popper.js</code>.</p>
+
+<h2 id="importing-styles">Importing Styles</h2>
+
+<h3 id="importing-precompiled-sass">Importing Precompiled Sass</h3>
+
+<p>To enjoy the full potential of Bootstrap and customize it to your needs, use the source files as a part of your project&rsquo;s bundling process.</p>
+
+<p>First, create your own <code>_custom.scss</code> and use it to override the <a href="/docs/4.3/getting-started/theming/">built-in custom variables</a>. Then, use your main Sass file to import your custom variables, followed by Bootstrap:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">&#34;custom&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;~bootstrap/scss/bootstrap&#34;</span><span class="p">;</span></code></pre></div>
+
+<p>For Bootstrap to compile, make sure you install and use the required loaders: <a href="https://github.com/webpack-contrib/sass-loader">sass-loader</a>, <a href="https://github.com/postcss/postcss-loader">postcss-loader</a> with <a href="https://github.com/postcss/autoprefixer#webpack">Autoprefixer</a>. With minimal setup, your webpack config should include this rule or similar:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="p">...</span>
+<span class="p">{</span>
+  <span class="nx">test</span><span class="o">:</span> <span class="sr">/\.(scss)$/</span><span class="p">,</span>
+  <span class="nx">use</span><span class="o">:</span> <span class="p">[{</span>
+    <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;style-loader&#39;</span><span class="p">,</span> <span class="c1">// inject CSS to page
+</span><span class="c1"></span>  <span class="p">},</span> <span class="p">{</span>
+    <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;css-loader&#39;</span><span class="p">,</span> <span class="c1">// translates CSS into CommonJS modules
+</span><span class="c1"></span>  <span class="p">},</span> <span class="p">{</span>
+    <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;postcss-loader&#39;</span><span class="p">,</span> <span class="c1">// Run postcss actions
+</span><span class="c1"></span>    <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">plugins</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="c1">// postcss plugins, can be exported to postcss.config.js
+</span><span class="c1"></span>        <span class="k">return</span> <span class="p">[</span>
+          <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;autoprefixer&#39;</span><span class="p">)</span>
+        <span class="p">];</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">},</span> <span class="p">{</span>
+    <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;sass-loader&#39;</span> <span class="c1">// compiles Sass to CSS
+</span><span class="c1"></span>  <span class="p">}]</span>
+<span class="p">},</span>
+<span class="p">...</span>
+</code></pre></div>
+
+<h3 id="importing-compiled-css">Importing Compiled CSS</h3>
+
+<p>Alternatively, you may use Bootstrap&rsquo;s ready-to-use CSS by simply adding this line to your project&rsquo;s entry point:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="k">import</span> <span class="s1">&#39;bootstrap/dist/css/bootstrap.min.css&#39;</span><span class="p">;</span>
+</code></pre></div>
+
+<p>In this case you may use your existing rule for <code>css</code> without any special modifications to webpack config, except you don&rsquo;t need <code>sass-loader</code> just <a href="https://github.com/webpack-contrib/style-loader">style-loader</a> and <a href="https://github.com/webpack-contrib/css-loader">css-loader</a>.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="p">...</span>
+<span class="nx">module</span><span class="o">:</span> <span class="p">{</span>
+  <span class="nx">rules</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nx">test</span><span class="o">:</span> <span class="sr">/\.css$/</span><span class="p">,</span>
+      <span class="nx">use</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;style-loader&#39;</span><span class="p">,</span> <span class="s1">&#39;css-loader&#39;</span><span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+<span class="p">...</span>
+</code></pre></div>
+
+        </main>
+      </div>
+    </div>
+
+    <script src="/docs/4.3/dist/js/bootstrap.bundle.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/docs/4.3/assets/js/vendor/anchor.min.js"></script>
+  <script src="/docs/4.3/assets/js/vendor/clipboard.min.js"></script>
+  <script src="/docs/4.3/assets/js/vendor/bs-custom-file-input.min.js"></script>
+  <script src="/docs/4.3/assets/js/src/application.js"></script>
+  <script src="/docs/4.3/assets/js/src/search.js"></script>
+  </body>
+</html>

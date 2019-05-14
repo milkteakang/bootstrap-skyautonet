@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Easily change the vertical alignment of inline, inline-block, inline-table, and table cell elements.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Hugo 0.55.4">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="4.3">
+
+<title>Vertical alignment · Bootstrap</title>
+
+<link rel="canonical" href="/docs/4.3/utilities/vertical-align/">
+
+
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="/docs/4.3/dist/css/bootstrap.css">
+
+<!-- Documentation extras -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+<link rel="stylesheet" href="/docs/4.3/assets/css/docs.min.css">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.3/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.3/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.3/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.3/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140139494-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-140139494-1');
+</script>
+
+
+  </head>
+  <body>
+    <a class="skippy sr-only sr-only-focusable" href="#content">
+  <span class="skippy-text">Skip to main content</span>
+</a>
+
+
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+  <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="d-block" viewBox="0 0 612 612" role="img"><title>Bootstrap</title><path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/><path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/></svg>
+  </a>
+
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item">
+        <a class="nav-link" href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/4.3/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
+      </li>
+    </ul>
+  </div>
+
+  <ul class="navbar-nav ml-md-auto">
+    <li class="nav-item dropdown">
+      <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-expanded="false">
+        v4.3
+      </a>
+      <div class="dropdown-menu dropdown-menu-md-right" aria-labelledby="bd-versions">
+        <a class="dropdown-item" href="/docs/4.3/">v4.3</a>
+      </div>
+    </li>
+  </ul>
+
+  <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="/docs/4.3/getting-started/download/">Download</a>
+</header>
+
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-md-3 col-xl-2 bd-sidebar">
+          <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/getting-started/introduction/">Getting started</a>
+      </div>
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/layout/overview/">Layout</a>
+      </div>
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/content/reboot/">Content</a>
+      </div>
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/components/alerts/">Components</a>
+      </div>
+
+    <div class="bd-toc-item active">
+        <a class="bd-toc-link" href="/docs/4.3/utilities/borders/">Utilities</a>
+        <ul class="nav bd-sidenav">
+            <li>
+              <a href="/docs/4.3/utilities/borders/">Borders</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/clearfix/">Clearfix</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/colors/">Colors</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/display/">Display</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/embed/">Embed</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/flex/">Flex</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/float/">Float</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/overflow/">Overflow</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/position/">Position</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/screen-readers/">Screen readers</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/shadows/">Shadows</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/sizing/">Sizing</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/spacing/">Spacing</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/stretched-link/">Stretched link</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/text/">Text</a>
+            </li>
+            <li class="active bd-sidenav-active">
+              <a href="/docs/4.3/utilities/vertical-align/">Vertical align</a>
+            </li>
+            <li>
+              <a href="/docs/4.3/utilities/visibility/">Visibility</a>
+            </li>
+        </ul>
+      </div>
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/extend/approach/">Extend</a>
+      </div>
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/migration/">Migration</a>
+      </div>
+
+    <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.3/about/overview/">About</a>
+      </div>
+</nav>
+
+        </div>
+
+        
+
+        <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+          <h1 class="bd-title" id="content">Vertical alignment</h1>
+          <p class="bd-lead">Easily change the vertical alignment of inline, inline-block, inline-table, and table cell elements.</p>
+          
+
+          <p>Change the alignment of elements with the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align"><code>vertical-alignment</code></a> utilities. Please note that vertical-align only affects inline, inline-block, inline-table, and table cell elements.</p>
+
+<p>Choose from <code>.align-baseline</code>, <code>.align-top</code>, <code>.align-middle</code>, <code>.align-bottom</code>, <code>.align-text-bottom</code>, and <code>.align-text-top</code> as needed.</p>
+
+<p>With inline elements:</p>
+
+<div class="bd-example">
+<span class="align-baseline">baseline</span>
+<span class="align-top">top</span>
+<span class="align-middle">middle</span>
+<span class="align-bottom">bottom</span>
+<span class="align-text-top">text-top</span>
+<span class="align-text-bottom">text-bottom</span>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-baseline&#34;</span><span class="p">&gt;</span>baseline<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-top&#34;</span><span class="p">&gt;</span>top<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-middle&#34;</span><span class="p">&gt;</span>middle<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-bottom&#34;</span><span class="p">&gt;</span>bottom<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-text-top&#34;</span><span class="p">&gt;</span>text-top<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-text-bottom&#34;</span><span class="p">&gt;</span>text-bottom<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span></code></pre></div>
+
+<p>With table cells:</p>
+
+<div class="bd-example">
+<table style="height: 100px;">
+  <tbody>
+    <tr>
+      <td class="align-baseline">baseline</td>
+      <td class="align-top">top</td>
+      <td class="align-middle">middle</td>
+      <td class="align-bottom">bottom</td>
+      <td class="align-text-top">text-top</td>
+      <td class="align-text-bottom">text-bottom</td>
+    </tr>
+  </tbody>
+</table>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">table</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 100px;&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-baseline&#34;</span><span class="p">&gt;</span>baseline<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-top&#34;</span><span class="p">&gt;</span>top<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-middle&#34;</span><span class="p">&gt;</span>middle<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-bottom&#34;</span><span class="p">&gt;</span>bottom<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-text-top&#34;</span><span class="p">&gt;</span>text-top<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-text-bottom&#34;</span><span class="p">&gt;</span>text-bottom<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span></code></pre></div>
+
+        </main>
+      </div>
+    </div>
+
+    <script src="/docs/4.3/dist/js/bootstrap.bundle.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/docs/4.3/assets/js/vendor/anchor.min.js"></script>
+  <script src="/docs/4.3/assets/js/vendor/clipboard.min.js"></script>
+  <script src="/docs/4.3/assets/js/vendor/bs-custom-file-input.min.js"></script>
+  <script src="/docs/4.3/assets/js/src/application.js"></script>
+  <script src="/docs/4.3/assets/js/src/search.js"></script>
+  </body>
+</html>
