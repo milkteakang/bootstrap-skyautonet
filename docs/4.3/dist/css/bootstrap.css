@@ -5830,6 +5830,11 @@ input[type="button"].btn-block {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
+.pagination-fill .page-item {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
 .page-item:first-child .page-link {
   margin-left: 0;
 }

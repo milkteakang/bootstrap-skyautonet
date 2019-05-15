@@ -11,6 +11,7 @@
 * components padding x lg : .75rem
 * header margin bottom : 0rem
 * paragraph margin bottom : 0rem
+* add pagination-fill
 
 [example link](https://milkteakang.github.io/bootstrap-skyautonet/docs/4.3/components/index.html)
 
