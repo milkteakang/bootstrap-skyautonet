@@ -9,6 +9,8 @@
 * components padding x : .5rem
 * components padding y lg : .375rem
 * components padding x lg : .75rem
+* header margin bottom : 0rem
+* paragraph margin bottom : 0rem
 
 [example link](https://milkteakang.github.io/bootstrap-skyautonet/docs/4.3/components/index.html)
 
